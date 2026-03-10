@@ -1,2 +1,14 @@
-# FWD-PBL-academic-roadmap-dashboard
-A student-focused academic roadmap dashboard that helps plan tasks, track learning progress, and manage project-based activities through a simple and interactive web interface.
+# Academic Roadmap Planning Dashboard
+
+This project is a web-based dashboard that helps students plan and track their academic progress. 
+The system allows users to organize tasks, monitor project-based learning activities, and identify skill gaps.
+
+Technologies Used:
+- HTML
+- CSS
+- JavaScript
+
+Features:
+- Task planning and management
+- Academic progress tracking
+- Interactive dashboard interface
