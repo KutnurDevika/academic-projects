@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AcadMap — Smart Academic Planning System</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ══ LANDING ══════════════════════════════════════════ -->
+<div class="page page-landing active" id="page-landing">
+  <nav class="site-nav">
+    <a class="logo" onclick="showPage('landing')">Acad<span>Map</span></a>
+    <div class="nav-links">
+      <a onclick="showPage('landing')">Home</a>
+      <a onclick="showPage('features')">Features</a>
+      <a onclick="showPage('about')">About</a>
+      <a class="btn-nav" onclick="showPage('login')">Try Demo</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge"><i class="fa fa-rocket"></i> Smart Academic Planning System</div>
+      <h1>Design Your<br><span>Academic Future</span></h1>
+      <p>Plan smarter semesters. Track performance. Generate structured academic roadmaps. Align your learning path with long-term career goals.</p>
+      <div class="hero-btns">
+        <button id="getStartedBtn" class="btn-primary" onclick="showPage('login')"><i class="fa fa-play"></i> Get Started</button>
+        <button class="btn-secondary" onclick="showPage('features')">Explore Features</button>
+      </div>
+    </div>
+    <div class="hero-card-wrap">
+      <div class="core-modules-card">
+        <h3>Core Modules</h3>
+        <div class="module-item"><div class="module-icon">🎯</div><div><div class="module-title">Goal Planner</div><div class="module-desc">Define academic and career objectives clearly.</div></div></div>
+        <div class="module-item"><div class="module-icon">🗺️</div><div><div class="module-title">Roadmap Generator</div><div class="module-desc">Create structured semester-wise academic plans.</div></div></div>
+        <div class="module-item"><div class="module-icon">📊</div><div><div class="module-title">Performance Analyzer</div><div class="module-desc">Evaluate progress and identify improvement areas.</div></div></div>
+        <div class="module-item"><div class="module-icon">🚀</div><div><div class="module-title">Career Alignment Engine</div><div class="module-desc">Align academic planning with future career paths.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-features">
+    <div class="section-head reveal"><div class="section-tag">What We Offer</div><h2>Core Features</h2><p>Smart tools designed to help students plan and track their academic journey efficiently.</p></div>
+    <div class="features-grid">
+      <div class="feature-card reveal"><span class="feature-icon">🎯</span><h4>Goal Setting System</h4><p>Define short-term and long-term academic goals clearly. The system structures goals into achievable milestones.</p></div>
+      <div class="feature-card reveal"><span class="feature-icon">📈</span><h4>Academic Progress Tracker</h4><p>Monitor subject performance and semester progress using visual indicators and structured tracking.</p></div>
+      <div class="feature-card reveal"><span class="feature-icon">🗺️</span><h4>Roadmap Generator</h4><p>Generates a step-by-step academic roadmap using Linked List concepts for structured navigation.</p></div>
+      <div class="feature-card reveal"><span class="feature-icon">📊</span><h4>Performance Analytics</h4><p>Displays progress through charts and visual feedback, helping students identify strengths and weaknesses.</p></div>
+      <div class="feature-card reveal"><span class="feature-icon">🧠</span><h4>DSA-Based Logic Engine</h4><p>Implements core data structures like Stack, Queue, and Linked List to manage academic tasks effectively.</p></div>
+      <div class="feature-card reveal"><span class="feature-icon">✅</span><h4>Task Management System</h4><p>Organize upcoming and completed tasks systematically to stay consistent and disciplined.</p></div>
+    </div>
+  </section>
+
+  <section class="lp-about">
+    <div class="about-inner">
+      <h2 class="reveal">About AcadMap</h2>
+      <p class="about-text reveal">AcadMap is a Smart Academic Roadmap Planning Dashboard System designed to help students organize, track, and optimize their academic journey. Many students struggle with unstructured planning and unclear career goals. Our system provides a guided framework for academic success.</p>
+      <p class="about-text reveal">By integrating Data Structures and Algorithms concepts such as Linked Lists, Stacks, and Queues, the platform ensures efficient management of goals, tasks, and academic progress.</p>
+      <div class="about-cards">
+        <div class="about-card"><span class="about-card-icon">🎯</span><h4>Our Mission</h4><p>To provide students with a structured academic planning system that improves clarity, productivity, and performance.</p></div>
+        <div class="about-card"><span class="about-card-icon">🧠</span><h4>Technical Foundation</h4><p>Built using HTML, CSS, Java, and core DSA concepts to ensure efficient academic tracking and roadmap generation.</p></div>
+        <div class="about-card"><span class="about-card-icon">🚀</span><h4>Future Vision</h4><p>To evolve into a full academic intelligence system with AI-driven insights and personalized career recommendations.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="lp-footer"><p>© 2026 <strong>AcadMap</strong> | Smart Academic Planning System — All rights reserved</p></footer>
+</div>
+
+<!-- ══ FEATURES ═════════════════════════════════════════ -->
+<div class="page page-features" id="page-features">
+  <nav class="site-nav">
+    <a class="logo" onclick="showPage('landing')">Acad<span>Map</span></a>
+    <div class="nav-links">
+      <a onclick="showPage('landing')">Home</a>
+      <a onclick="showPage('features')" style="color:var(--accent);font-weight:600">Features</a>
+      <a onclick="showPage('about')">About</a>
+      <a class="btn-nav" onclick="showPage('login')">Try Demo</a>
+    </div>
+  </nav>
+  <div class="page-hero">
+    <div class="tag">Platform Capabilities</div>
+    <h1>Core Features</h1>
+    <p>Smart tools designed to help students plan and track their academic journey efficiently.</p>
+  </div>
+  <div class="features-section">
+    <div class="features-big-grid">
+      <div class="feat-card"><div class="feat-card-icon">🎯</div><h3>Goal Setting System</h3><p>Define short-term and long-term academic goals clearly. The system structures goals into achievable milestones to keep you focused throughout your semester.</p><span class="feat-tag">PLANNING</span></div>
+      <div class="feat-card"><div class="feat-card-icon">📈</div><h3>Academic Progress Tracker</h3><p>Monitor subject performance and semester progress using visual indicators and structured tracking. Stay aware of your growth in real time with beautiful charts.</p><span class="feat-tag">ANALYTICS</span></div>
+      <div class="feat-card"><div class="feat-card-icon">🗺️</div><h3>Roadmap Generator</h3><p>Generates a step-by-step academic roadmap using Linked List concepts for structured navigation. Each semester is planned intelligently based on your goals.</p><span class="feat-tag">ROADMAP</span></div>
+      <div class="feat-card"><div class="feat-card-icon">📊</div><h3>Performance Analytics</h3><p>Displays progress through charts and visual feedback, helping students identify strengths and weaknesses across subjects and plan targeted improvements.</p><span class="feat-tag">INSIGHTS</span></div>
+      <div class="feat-card"><div class="feat-card-icon">🧠</div><h3>DSA-Based Logic Engine</h3><p>Implements core data structures like Stack, Queue, and Linked List to manage academic tasks effectively, ensuring optimal performance and smart prioritization.</p><span class="feat-tag">ENGINE</span></div>
+      <div class="feat-card"><div class="feat-card-icon">✅</div><h3>Task Management System</h3><p>Organize upcoming and completed tasks systematically to stay consistent and disciplined. Set priorities, deadlines and track completion with ease.</p><span class="feat-tag">TASKS</span></div>
+    </div>
+  </div>
+  <div class="cta-section"><h2>Ready to Map Your Future?</h2><p>Join AcadMap and take control of your academic journey today.</p><button class="cta-btn" onclick="showPage('login')"><i class="fa fa-arrow-right"></i> Get Started Free</button></div>
+  <footer class="page-footer"><p>© 2026 <strong>AcadMap</strong> | Smart Academic Planning System</p></footer>
+</div>
+
+<!-- ══ ABOUT ═════════════════════════════════════════════ -->
+<div class="page page-about" id="page-about">
+  <nav class="site-nav">
+    <a class="logo" onclick="showPage('landing')">Acad<span>Map</span></a>
+    <div class="nav-links">
+      <a onclick="showPage('landing')">Home</a>
+      <a onclick="showPage('features')">Features</a>
+      <a onclick="showPage('about')" style="color:var(--accent);font-weight:600">About</a>
+      <a class="btn-nav" onclick="showPage('login')">Try Demo</a>
+    </div>
+  </nav>
+  <div class="page-hero"><div class="tag">Our Story</div><h1>About AcadMap</h1><p>A Smart Academic Roadmap Planning Dashboard designed to help every student achieve their academic and career potential.</p></div>
+  <div class="about-content">
+    <p class="about-text-p reveal">AcadMap is a Smart Academic Roadmap Planning Dashboard System designed to help students organize, track, and optimize their academic journey. Many students struggle with unstructured planning and unclear career goals. Our system provides a guided framework for academic success.</p>
+    <p class="about-text-p reveal">By integrating Data Structures and Algorithms concepts such as Linked Lists, Stacks, and Queues, the platform ensures efficient management of goals, tasks, and academic progress. The system bridges the gap between academic learning and long-term career alignment.</p>
+    <div class="divider-line reveal"></div>
+    <div class="stats-row reveal">
+      <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">Students Helped</div></div>
+      <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">Core Modules</div></div>
+      <div class="stat-item"><div class="stat-num">98%</div><div class="stat-label">Satisfaction Rate</div></div>
+      <div class="stat-item"><div class="stat-num">2026</div><div class="stat-label">Founded</div></div>
+    </div>
+    <div class="about-cards3">
+      <div class="about-card3"><div class="about-card3-icon">🎯</div><h4>Our Mission</h4><p>To provide students with a structured academic planning system that improves clarity, productivity, and performance across all semesters.</p></div>
+      <div class="about-card3"><div class="about-card3-icon">🧠</div><h4>Technical Foundation</h4><p>Built using HTML, CSS, Java, and core DSA concepts to ensure efficient academic tracking and roadmap generation that is fast and reliable.</p></div>
+      <div class="about-card3"><div class="about-card3-icon">🚀</div><h4>Future Vision</h4><p>To evolve into a full academic intelligence system with AI-driven insights and personalized career recommendations for every student.</p></div>
+    </div>
+    <div style="margin-top:50px" class="reveal"><h2 style="font-family:Syne,sans-serif;font-size:28px;font-weight:800;color:var(--purple-dark);margin-bottom:20px">Built With</h2>
+    <div class="tech-grid">
+      <div class="tech-chip"><span>🌐</span>HTML5</div>
+      <div class="tech-chip"><span>🎨</span>CSS3</div>
+      <div class="tech-chip"><span>⚡</span>JavaScript</div>
+      <div class="tech-chip"><span>🧮</span>DSA Concepts</div>
+    </div></div>
+  </div>
+  <footer class="page-footer"><p>© 2026 <strong>AcadMap</strong> | Smart Academic Planning System</p></footer>
+</div>
+
+<!-- ══ LOGIN ═════════════════════════════════════════════ -->
+<div class="page page-login" id="page-login">
+  <button class="back-home" onclick="showPage('landing')"><i class="fa fa-arrow-left"></i> Back to Home</button>
+  <div class="auth-card">
+    <div class="logo-row">
+      <div class="logo-mark" onclick="showPage('landing')">Acad<span>Map</span></div>
+      <div class="auth-subtitle">Smart Academic Planning System</div>
+    </div>
+    <h2>Welcome back</h2>
+    <p class="sub">Sign in to your account to continue.</p>
+    <div class="error-msg" id="loginErrorMsg"></div>
+    <div class="auth-form-group">
+      <label class="auth-label">Email Address</label>
+      <div class="input-wrap">
+        <i class="fa fa-envelope input-icon"></i>
+        <input class="auth-input" type="email" id="loginEmail" placeholder="you@university.edu">
+      </div>
+    </div>
+    <div class="auth-form-group">
+      <label class="auth-label">Password</label>
+      <div class="input-wrap">
+        <i class="fa fa-lock input-icon"></i>
+        <input class="auth-input" type="password" id="loginPassword" placeholder="Enter your password">
+        <button class="pw-toggle" onclick="togglePw('loginPassword',this)" type="button"><i class="fa fa-eye"></i></button>
+      </div>
+    </div>
+    <div class="form-footer-row">
+      <label class="remember"><input type="checkbox"> Remember me</label>
+      <a href="#" class="forgot">Forgot password?</a>
+    </div>
+    <button class="btn-auth" onclick="handleLogin()"><i class="fa fa-sign-in-alt"></i> Sign In</button>
+    <div class="divider-row">or</div>
+    <div class="switch-link">Don't have an account? <a onclick="showPage('signup')">Sign up free</a></div>
+  </div>
+</div>
+
+<!-- ══ SIGNUP ════════════════════════════════════════════ -->
+<div class="page page-signup" id="page-signup">
+  <button class="back-home" onclick="showPage('landing')"><i class="fa fa-arrow-left"></i> Back to Home</button>
+  <div class="auth-card">
+    <div class="logo-row">
+      <div class="logo-mark" onclick="showPage('landing')">Acad<span>Map</span></div>
+      <div class="auth-subtitle">Smart Academic Planning System</div>
+    </div>
+    <h2>Create your account</h2>
+    <p class="sub">Join AcadMap and start planning your academic future.</p>
+    <div class="error-msg" id="signupErrorMsg"></div>
+    <div class="form-row-2">
+      <div class="auth-form-group"><label class="auth-label">First Name</label><div class="input-wrap"><i class="fa fa-user input-icon"></i><input class="auth-input" type="text" id="firstName" placeholder="Priya"></div></div>
+      <div class="auth-form-group"><label class="auth-label">Last Name</label><div class="input-wrap"><i class="fa fa-user input-icon"></i><input class="auth-input" type="text" id="lastName" placeholder="Sharma"></div></div>
+    </div>
+    <div class="auth-form-group"><label class="auth-label">Email Address</label><div class="input-wrap"><i class="fa fa-envelope input-icon"></i><input class="auth-input" type="email" id="signupEmail" placeholder="you@university.edu"></div></div>
+    <div class="auth-form-group"><label class="auth-label">Branch / Department</label><div class="input-wrap"><i class="fa fa-graduation-cap input-icon"></i><input class="auth-input" type="text" id="branch" placeholder="e.g. Computer Science Engineering"></div></div>
+    <div class="auth-form-group">
+      <label class="auth-label">Password</label>
+      <div class="input-wrap"><i class="fa fa-lock input-icon"></i><input class="auth-input" type="password" id="signupPassword" placeholder="Create a strong password" oninput="checkStrength(this.value)"><button class="pw-toggle" onclick="togglePw('signupPassword',this)" type="button"><i class="fa fa-eye"></i></button></div>
+      <div class="pw-strength"><div class="strength-bar"><div class="strength-fill" id="strengthFill"></div></div><div class="strength-label" id="strengthLabel">Enter a password</div></div>
+    </div>
+    <div class="auth-form-group"><label class="auth-label">Confirm Password</label><div class="input-wrap"><i class="fa fa-lock input-icon"></i><input class="auth-input" type="password" id="confirmPassword" placeholder="Re-enter your password"><button class="pw-toggle" onclick="togglePw('confirmPassword',this)" type="button"><i class="fa fa-eye"></i></button></div></div>
+    <div class="terms-row"><input type="checkbox" id="termsCheck"><label for="termsCheck">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label></div>
+    <button class="btn-auth" onclick="handleSignup()"><i class="fa fa-user-plus"></i> Create Account</button>
+    <div class="switch-link">Already have an account? <a onclick="showPage('login')">Sign in</a></div>
+  </div>
+</div>
+
+
+<!-- ══ DASHBOARD ═════════════════════════════════════════ -->
+<div class="page page-dashboard" id="page-dashboard">
+<div id="toast"><i class="fa fa-check-circle"></i> <span id="toastMsg">Done!</span></div>
+
+<!-- ─── SIDEBAR ─── -->
+<div class="sidebar" id="dashSidebar">
+  <div class="sidebar-toggle" onclick="toggleSidebar()" title="Toggle sidebar">
+    <i class="fa fa-chevron-left"></i>
+  </div>
+  <div class="sidebar-logo">
+    <a href="#" onclick="showPage('landing');return false;" style="text-decoration:none"><div class="logo-mark">AcadMap</div></a>
+    <p>Academic Dashboard</p>
+  </div>
+  <nav>
+    <div class="nav-section">Main</div>
+    <div class="nav-item active" data-tip="Overview" onclick="showSection('overview',this)"><div class="icon"><i class="fa fa-chart-pie"></i></div><span>Overview</span></div>
+    <div class="nav-item" data-tip="Planner" onclick="showSection('planner',this)"><div class="icon"><i class="fa fa-list-check"></i></div><span>Planner</span></div>
+    <div class="nav-item" data-tip="Roadmap" onclick="showSection('roadmap',this)"><div class="icon"><i class="fa fa-map"></i></div><span>Roadmap</span></div>
+    <div class="nav-section">Tracking</div>
+    <div class="nav-item" data-tip="Timeline" onclick="showSection('timeline',this)"><div class="icon"><i class="fa fa-calendar-days"></i></div><span>Timeline</span></div>
+    <div class="nav-item" data-tip="PBL Tracker" onclick="showSection('pbl',this)"><div class="icon"><i class="fa fa-lightbulb"></i></div><span>PBL Tracker</span></div>
+    <div class="nav-item" data-tip="Skill Gaps" onclick="showSection('skills',this)"><div class="icon"><i class="fa fa-brain"></i></div><span>Skill Gaps</span></div>
+    <div class="nav-section">System</div>
+    <div class="nav-item" data-tip="Admin" onclick="showSection('admin',this)"><div class="icon"><i class="fa fa-users-gear"></i></div><span>Admin</span></div>
+    <div class="nav-item ai-nav-item" data-tip="AI Advisor" onclick="showSection('ai',this)"><div class="icon ai-icon-glow"><i class="fa fa-robot"></i></div><span>AI Advisor</span><span class="ai-nav-badge">AI</span></div>
+  </nav>
+  <div class="sidebar-footer">
+    <div class="user-chip" id="sidebarUser">
+      <div class="avatar" id="sidebarAvatar">S</div>
+      <div style="flex:1"><div class="name" id="sidebarName">Student</div><div class="role">Learner</div></div>
+      <div onclick="logout()" title="Logout" style="cursor:pointer;color:var(--muted);font-size:14px;padding:4px;transition:color 0.2s" onmouseover="this.style.color='#ff6b6b'" onmouseout="this.style.color='var(--muted)'"><i class="fa fa-sign-out-alt"></i></div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── NAVBAR ─── -->
+<div class="navbar">
+  <div class="page-title" id="pageTitle">Overview <span>Dashboard</span></div>
+  <div class="nav-right">
+    <div class="search-box"><i class="fa fa-search" style="color:var(--muted);font-size:12px"></i><input placeholder="Search anything…" id="searchInput"></div>
+    <div class="theme-toggle" onclick="toggleTheme()" title="Toggle theme"><i class="fa fa-moon moon"></i><i class="fa fa-sun sun"></i></div>
+    <div class="icon-btn" onclick="showNotifPanel()"><i class="fa fa-bell"></i><div class="notif-dot" id="notifDot"></div></div>
+    <div class="icon-btn"><i class="fa fa-user-circle"></i></div>
+  </div>
+</div>
+
+<!-- ─── MAIN ─── -->
+<div class="main">
+
+<!-- ══ OVERVIEW ══════════════════════════════════════════ -->
+<div id="overview" class="section active">
+  <div class="section-header">
+    <div>
+      <h2>Welcome back, <span id="greetName" style="background:linear-gradient(135deg,var(--accent),#9c8fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Student</span> ✦</h2>
+      <p>Here's your academic snapshot for today.</p>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center">
+      <div class="smart-notif-btn" id="reminderBadge" onclick="runSmartReminders()" title="Run smart reminders"><i class="fa fa-robot"></i> Smart Reminders</div>
+    </div>
+  </div>
+
+  <!-- Stat cards -->
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fas fa-clipboard-list"></i></div>
+      <div class="stat-label">Total Tasks</div>
+      <div class="stat-value" id="taskCount">0</div>
+      <div class="stat-sub"><span class="up" id="taskComplPct">0%</span> completed</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fas fa-diagram-project"></i></div>
+      <div class="stat-label">Projects</div>
+      <div class="stat-value" id="projectCount">0</div>
+      <div class="stat-sub"><span class="up" id="projCompPct">0%</span> done</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+      <div class="stat-label">Events</div>
+      <div class="stat-value" id="eventCount">0</div>
+      <div class="stat-sub" id="nextEventSub">Scheduled</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon" style="background:rgba(255,107,107,0.15);color:#ff6b6b"><i class="fa fa-exclamation-triangle"></i></div>
+      <div class="stat-label">Skill Gaps</div>
+      <div class="stat-value" id="gapCount" style="color:#ff6b6b">0</div>
+      <div class="stat-sub">subjects need work</div>
+    </div>
+  </div>
+
+  <div class="overview-grid">
+    <!-- Skill Gap Chart -->
+    <div class="card">
+      <div class="card-title"><i class="fas fa-chart-bar"></i> Skill Gap Analytics</div>
+      <canvas id="skillChart"></canvas>
+      <div class="skill-legend" id="skillLegend"></div>
+    </div>
+
+    <div class="side-cards">
+      <!-- Progress ring -->
+      <div class="card">
+        <div class="card-title"><i class="fa fa-bullseye"></i> Overall Progress</div>
+        <div class="ring-wrap">
+          <svg width="120" height="120" class="ring-svg">
+            <defs><linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:var(--accent)"/><stop offset="100%" style="stop-color:var(--accent2)"/></linearGradient></defs>
+            <circle class="ring-bg" cx="60" cy="60" r="50"/>
+            <circle class="ring-fill" cx="60" cy="60" r="50" stroke-dasharray="314" stroke-dashoffset="314" id="ringFill"/>
+          </svg>
+          <div class="ring-label"><div class="ring-pct" id="ringPct">0%</div><div class="ring-sub">Tasks Completed</div></div>
+        </div>
+      </div>
+      <!-- Activity -->
+      <div class="card">
+        <div class="card-title"><i class="fa fa-bolt"></i> Activity Feed</div>
+        <div id="activityFeed"><div class="empty-state" style="padding:16px"><i class="fa fa-clock" style="font-size:20px"></i><p>No activity yet.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skill Gap Alerts -->
+  <div class="card" id="gapAlertCard" style="margin-top:16px">
+    <div class="card-title"><i class="fa fa-exclamation-circle" style="color:#ff6b6b"></i> Detected Skill Gaps & Suggestions</div>
+    <div id="gapAlertList"></div>
+  </div>
+
+  <!-- Upcoming Deadlines -->
+  <div class="card" style="margin-top:16px">
+    <div class="card-title"><i class="fa fa-clock" style="color:var(--accent4)"></i> Upcoming Deadlines</div>
+    <div id="upcomingDeadlines"></div>
+  </div>
+
+  <!-- Notifications panel -->
+  <div class="card" id="notifCard" style="display:none;margin-top:16px">
+    <div class="card-title"><i class="fa fa-bell"></i> Notifications</div>
+    <div id="notifList"></div>
+  </div>
+</div>
+
+<!-- ══ PLANNER ═══════════════════════════════════════════ -->
+<div id="planner" class="section">
+  <div class="section-header"><div><h2>Task Planner</h2><p>Organise and track your academic tasks.</p></div></div>
+  <div class="planner-grid">
+    <div class="card">
+      <div class="card-title"><i class="fa fa-plus"></i> New Task</div>
+      <div class="form-group"><label class="form-label">Task Name</label><input class="form-control" id="taskName" placeholder="e.g. Complete DSA assignment"></div>
+      <div class="form-group"><label class="form-label">Due Date</label><input class="form-control" type="date" id="taskDate"></div>
+      <div class="form-group"><label class="form-label">Subject / Skill</label>
+        <select class="form-control" id="taskSubject">
+          <option value="DSA">DSA</option><option value="Web Dev">Web Dev</option><option value="AI/ML">AI/ML</option>
+          <option value="DBMS">DBMS</option><option value="Cloud">Cloud</option><option value="Networks">Networks</option><option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group"><label class="form-label">Priority</label>
+        <select class="form-control" id="taskPriority"><option value="High">🔴 High</option><option value="Medium" selected>🟡 Medium</option><option value="Low">🟢 Low</option></select>
+      </div>
+      <div class="form-group"><label class="form-label">Status</label>
+        <select class="form-control" id="taskStatus"><option value="Not Started">Not Started</option><option value="In Progress">In Progress</option><option value="Completed">Completed</option></select>
+      </div>
+      <button class="btn btn-primary" onclick="addTask()"><i class="fa fa-plus"></i> Add Task</button>
+    </div>
+    <div class="card">
+      <div class="card-title" style="margin-bottom:14px"><i class="fa fa-list"></i> Your Tasks</div>
+      <div class="task-stats">
+        <div class="task-stat-box"><div class="num" id="tTotal">0</div><div class="lbl">Total</div></div>
+        <div class="task-stat-box"><div class="num" id="tDone">0</div><div class="lbl">Done</div></div>
+        <div class="task-stat-box"><div class="num" id="tLeft">0</div><div class="lbl">Remaining</div></div>
+      </div>
+      <div class="prog-bar"><div class="prog-fill" id="taskProgress" style="width:0%"></div></div>
+      <div class="filter-row">
+        <button class="filter-btn active" onclick="filterTasks('all',this)">All</button>
+        <button class="filter-btn" onclick="filterTasks('High',this)">🔴 High</button>
+        <button class="filter-btn" onclick="filterTasks('Medium',this)">🟡 Medium</button>
+        <button class="filter-btn" onclick="filterTasks('Low',this)">🟢 Low</button>
+        <button class="filter-btn" onclick="filterTasks('Completed',this)">✅ Done</button>
+      </div>
+      <div id="taskList"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ROADMAP ═══════════════════════════════════════════ -->
+<div id="roadmap" class="section">
+  <div class="section-header"><div><h2>Academic Roadmap</h2><p>Build your semester-wise learning path with milestones and targets.</p></div></div>
+  <div class="planner-grid">
+    <!-- Add Milestone -->
+    <div class="card">
+      <div class="card-title"><i class="fa fa-plus"></i> Add Milestone</div>
+      <div class="form-group"><label class="form-label">Milestone Title</label><input class="form-control" id="rmTitle" placeholder="e.g. Master Arrays & Linked Lists"></div>
+      <div class="form-group"><label class="form-label">Semester / Phase</label>
+        <select class="form-control" id="rmSemester">
+          <option>Semester 1</option><option>Semester 2</option><option>Semester 3</option><option>Semester 4</option>
+          <option>Semester 5</option><option>Semester 6</option><option>Semester 7</option><option>Semester 8</option>
+        </select>
+      </div>
+      <div class="form-group"><label class="form-label">Subject</label>
+        <select class="form-control" id="rmSubject">
+          <option value="DSA">DSA</option><option value="Web Dev">Web Dev</option><option value="AI/ML">AI/ML</option>
+          <option value="DBMS">DBMS</option><option value="Cloud">Cloud</option><option value="Networks">Networks</option><option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group"><label class="form-label">Target Date</label><input class="form-control" type="date" id="rmDate"></div>
+      <div class="form-group"><label class="form-label">Status</label>
+        <select class="form-control" id="rmStatus"><option>Not Started</option><option>In Progress</option><option>Completed</option></select>
+      </div>
+      <button class="btn btn-primary" onclick="addMilestone()"><i class="fa fa-plus"></i> Add Milestone</button>
+    </div>
+    <!-- Roadmap Visual -->
+    <div class="card">
+      <div class="card-title"><i class="fa fa-map"></i> Your Roadmap</div>
+      <div id="roadmapView"><div class="empty-state"><i class="fa fa-map"></i><p>No milestones yet. Add your first!</p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TIMELINE ══════════════════════════════════════════ -->
+<div id="timeline" class="section">
+  <div class="section-header"><div><h2>Timeline</h2><p>Track your upcoming academic events.</p></div></div>
+  <div class="timeline-wrap">
+    <div class="card">
+      <div class="card-title"><i class="fa fa-calendar-plus"></i> Add Event</div>
+      <div class="form-group"><label class="form-label">Event Name</label><input class="form-control" id="eventName" placeholder="e.g. Math Exam"></div>
+      <div class="form-group"><label class="form-label">Date</label><input class="form-control" type="date" id="eventDate"></div>
+      <div class="form-group"><label class="form-label">Category</label>
+        <select class="form-control" id="eventCategory">
+          <option>📝 Exam</option><option>📚 Assignment</option><option>🗣️ Presentation</option><option>🧪 Lab</option><option>📅 Other</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" onclick="addEvent()"><i class="fa fa-plus"></i> Add Event</button>
+    </div>
+    <div class="card">
+      <div class="card-title"><i class="fa fa-timeline"></i> Events Timeline</div>
+      <div id="eventList"><div class="empty-state"><i class="fa fa-calendar-xmark"></i><p>No events yet. Add your first event!</p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PBL TRACKER ═══════════════════════════════════════ -->
+<div id="pbl" class="section">
+  <div class="section-header"><div><h2>PBL Tracker</h2><p>Manage your project-based learning.</p></div></div>
+  <div class="pbl-wrap">
+    <div class="card">
+      <div class="card-title"><i class="fa fa-plus"></i> New Project</div>
+      <div class="form-group"><label class="form-label">Project Name</label><input class="form-control" id="projectName" placeholder="e.g. IoT Smart Campus"></div>
+      <div class="form-group"><label class="form-label">Subject</label><input class="form-control" id="projectSubject" placeholder="e.g. Computer Networks"></div>
+      <div class="form-group"><label class="form-label">Target Date</label><input class="form-control" type="date" id="projectDate"></div>
+      <div class="form-group"><label class="form-label">Status</label>
+        <select class="form-control" id="projectStatus"><option>Not Started</option><option>In Progress</option><option>Completed</option></select>
+      </div>
+      <button class="btn btn-primary" onclick="addProject()"><i class="fa fa-plus"></i> Add Project</button>
+    </div>
+    <div class="card">
+      <div class="card-title"><i class="fa fa-layer-group"></i> Projects</div>
+      <div id="projectList"><div class="empty-state"><i class="fa fa-lightbulb"></i><p>No projects yet. Start your first!</p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SKILL GAPS ════════════════════════════════════════ -->
+<div id="skills" class="section">
+  <div class="section-header"><div><h2>Skill Gap Engine</h2><p>Automatically detect weak areas and get smart improvement suggestions.</p></div></div>
+
+  <!-- Skill Editor -->
+  <div class="planner-grid" style="margin-bottom:20px">
+    <div class="card">
+      <div class="card-title"><i class="fa fa-sliders"></i> Update Skill Scores</div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:16px">Enter your current proficiency level (0–100) for each subject. Scores below 60% are flagged as gaps.</p>
+      <div id="skillEditorList"></div>
+      <button class="btn btn-primary" style="margin-top:16px" onclick="saveSkillScores()"><i class="fa fa-save"></i> Save & Analyse</button>
+    </div>
+    <div class="card">
+      <div class="card-title"><i class="fa fa-chart-bar"></i> Proficiency Overview</div>
+      <canvas id="skillDetailChart" style="max-height:300px"></canvas>
+    </div>
+  </div>
+
+  <!-- Suggestions -->
+  <div class="card">
+    <div class="card-title"><i class="fa fa-lightbulb" style="color:var(--accent4)"></i> Skill Improvement Suggestions</div>
+    <div id="skillSuggestions"></div>
+  </div>
+</div>
+
+<!-- ══ ADMIN ══════════════════════════════════════════════ -->
+<div id="admin" class="section">
+  <div class="section-header"><div><h2>Admin Panel</h2><p>Monitor students, skill gaps and project completion.</p></div></div>
+
+  <div class="admin-wrap">
+    <div class="card">
+      <div class="card-title"><i class="fa fa-user-plus"></i> Add Student</div>
+      <div class="form-group"><label class="form-label">Full Name</label><input class="form-control" id="userName" placeholder="e.g. Priya Sharma"></div>
+      <div class="form-group"><label class="form-label">Role</label>
+        <select class="form-control" id="userRole"><option>Student</option><option>Teacher</option><option>Admin</option></select>
+      </div>
+      <button class="btn btn-primary" onclick="addUser()"><i class="fa fa-plus"></i> Add User</button>
+    </div>
+    <div class="card">
+      <div class="card-title"><i class="fa fa-users"></i> Users</div>
+      <div id="userList"><div class="empty-state"><i class="fa fa-user-slash"></i><p>No users yet.</p></div></div>
+    </div>
+  </div>
+
+  <!-- Admin monitoring stats -->
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px">
+    <div class="card">
+      <div class="card-title"><i class="fa fa-graduation-cap"></i> Academic Overview</div>
+      <div id="adminAcademicStats"></div>
+    </div>
+    <div class="card">
+      <div class="card-title"><i class="fa fa-exclamation-triangle" style="color:#ff6b6b"></i> Skill Gap Monitor</div>
+      <div id="adminGapMonitor"></div>
+    </div>
+    <div class="card">
+      <div class="card-title"><i class="fa fa-diagram-project" style="color:var(--accent2)"></i> Project Completion</div>
+      <div id="adminProjectMonitor"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ AI ADVISOR ════════════════════════════════════════ -->
+<div id="ai" class="section">
+  <div class="section-header">
+    <div>
+      <h2>AI <span style="background:linear-gradient(135deg,#6c63ff,#00d4aa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Advisor</span> ✦</h2>
+      <p>Your personal AI-powered academic coach. Ask anything about your studies, skill gaps, or career path.</p>
+    </div>
+    <div class="ai-status-pill" id="aiStatusPill"><span class="ai-pulse-dot"></span> AI Ready</div>
+  </div>
+
+  <!-- Quick action chips -->
+  <div class="ai-chips-row">
+    <button class="ai-chip" onclick="aiQuickPrompt('Analyse my skill gaps and give a 4-week improvement plan')">📊 Analyse My Skill Gaps</button>
+    <button class="ai-chip" onclick="aiQuickPrompt('Generate a semester study roadmap for a CSE student focusing on DSA and AI/ML')">🗺️ Generate Study Roadmap</button>
+    <button class="ai-chip" onclick="aiQuickPrompt('What career paths suit a student strong in Web Dev and DBMS but weak in AI/ML?')">🚀 Career Path Advice</button>
+    <button class="ai-chip" onclick="aiQuickPrompt('Give me top 5 project ideas for a student learning Cloud and Networks')">💡 Project Ideas</button>
+    <button class="ai-chip" onclick="aiQuickPrompt('How should I prioritise my pending tasks this week to maximize productivity?')">⚡ Task Prioritisation</button>
+    <button class="ai-chip" onclick="aiQuickPrompt('Create a daily study schedule that balances DSA, Web Dev and AI/ML practice')">🕐 Daily Schedule</button>
+  </div>
+
+  <div class="ai-layout">
+    <!-- Chat window -->
+    <div class="ai-chat-card">
+      <div class="ai-chat-header">
+        <div class="ai-avatar-wrap"><div class="ai-avatar"><i class="fa fa-robot"></i></div><div class="ai-dot-anim" id="aiThinkAnim" style="display:none"><span></span><span></span><span></span></div></div>
+        <div><div class="ai-chat-title">AcadMap AI Advisor</div><div class="ai-chat-sub">Powered by Claude · Context-aware academic coaching</div></div>
+        <button class="ai-clear-btn" onclick="clearAIChat()"><i class="fa fa-rotate-right"></i> New Chat</button>
+      </div>
+
+      <div class="ai-messages" id="aiMessages">
+        <div class="ai-msg ai-msg-bot">
+          <div class="ai-msg-avatar"><i class="fa fa-robot"></i></div>
+          <div class="ai-msg-bubble">
+            <p>👋 Hi! I'm your <strong>AcadMap AI Advisor</strong>. I can see your academic profile and help you with:</p>
+            <ul style="margin:10px 0 0 16px;line-height:1.9;font-size:13px">
+              <li>📊 Personalized skill gap analysis & improvement plans</li>
+              <li>🗺️ Academic roadmap and semester planning</li>
+              <li>🚀 Career path recommendations based on your strengths</li>
+              <li>💡 Project ideas matched to your skill level</li>
+              <li>⚡ Smart study scheduling & task prioritisation</li>
+            </ul>
+            <p style="margin-top:10px;font-size:13px;color:var(--muted)">Use the quick buttons above or type your question below!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ai-input-row">
+        <textarea class="ai-input" id="aiInput" placeholder="Ask anything about your academics, skills, or career path…" rows="1" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendAIMessage()}"></textarea>
+        <button class="ai-send-btn" id="aiSendBtn" onclick="sendAIMessage()"><i class="fa fa-paper-plane"></i></button>
+      </div>
+      <div class="ai-input-hint">Press Enter to send · Shift+Enter for new line · AI uses your skill scores & task data</div>
+    </div>
+
+    <!-- Context panel -->
+    <div class="ai-context-panel">
+      <div class="card" style="margin-bottom:14px">
+        <div class="card-title"><i class="fa fa-circle-info"></i> Your Academic Context</div>
+        <p style="font-size:12px;color:var(--muted);margin-bottom:12px">The AI uses this data to personalise responses.</p>
+        <div id="aiContextDisplay"></div>
+      </div>
+      <div class="card" style="margin-bottom:14px">
+        <div class="card-title"><i class="fa fa-history"></i> Chat History</div>
+        <div id="aiHistoryList"><p style="font-size:12px;color:var(--muted)">No history yet.</p></div>
+      </div>
+      <div class="card">
+        <div class="card-title"><i class="fa fa-lightbulb" style="color:var(--accent4)"></i> Suggested Questions</div>
+        <div class="ai-suggestions-list" id="aiSuggList"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div><!-- /main -->
+</div><!-- /page-dashboard -->
+
+
+<script src="script.js"></script>
+</body>
+</html>
+
